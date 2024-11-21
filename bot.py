@@ -8,9 +8,9 @@ intents = discord.Intents.default()
 intents.message_content = True
 bot = commands.Bot(command_prefix='$', intents=intents)
 
-@bot.command(name="elisi_fikri")
-async def elisi_fikri(ctx):
-         ideas = [
+@bot.command(name="Bana_bir_fikir_ver")
+async def Bana_bir_fikir_ver(ctx):
+         Fikirler = [
         "Evde Sıfır Atık Projeleri: Plastik kullanımını azaltmaya yönelik DIY projeler.",
         "Kompost Yapımı: Evde kolayca kompost yapma rehberi.",
         "Geri Dönüşüm Doğruları ve Mitleri: Geri dönüşümde yapılan hatalar.",
@@ -37,15 +37,15 @@ async def elisi_fikri(ctx):
         "Eko-Evler ve Mimarisi: Enerji verimli evlerin avantajları.",
         "Sürdürülebilir Balık Tüketimi: Deniz kaynaklarını koruma yolları."
     ]
- await ctx.send(f"İşte bir el işi fikri: {random.choice(ideas)}")
+ await ctx.send(f"İşte bir el işi fikri: {random.choice(Fikirler)}")
 
 @bot.event
 async def on_ready():
     print(f'{bot.user} a giriş yapıldı!')
 
 
-@bot.command(name="mem")
-async def mem(ctx):
+@bot.command(name="Bana_bir_mem_yarat")
+async def Bana_bir_mem_yarat(ctx):
     try:
         img_name = random.choice(os.listdir('images'))
         with open(f'images/{img_name}', 'rb') as f:
